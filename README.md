@@ -5,4 +5,5 @@
 Запуск: 
 
 1. ``git clone https://github.com/stanis1avs/interview_internetlab``
-2. ``npm install && ng serve``
+2. ``cd interview_internetlab``
+3. ``npm install --force && ng serve``
