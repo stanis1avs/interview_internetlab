@@ -1,0 +1,184 @@
+.reviews-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F6F8FA;
+  margin-bottom: 80px;
+}
+
+:host ::ng-deep .container {
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 56px;
+  margin-top: 57px;
+}
+
+.reviews-carousel {
+  width: 90%;
+  padding: 32px 0 42px;
+}
+
+.reviews-slide {
+  margin: 0 10px 8px;
+}
+
+.review-card {
+  padding: 22px 22px 38px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 310px;
+}
+
+.review-header {
+  display: flex;
+  gap: 16px;
+}
+
+.review-image {
+  width: 44px;
+  height: 44px;
+  border-radius: 44px;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 2px;
+}
+
+.review-header-city {
+  font-size: 12px;
+  line-height: 16px;
+  margin: 2px 0 0;
+  color: #5E646A;
+}
+
+.review-content {
+  padding-top: 20px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+::ng-deep .slick-prev.slick-disabled:before,
+::ng-deep .slick-next.slick-disabled:before {
+  color: #C2C8CD;
+  opacity: 1;
+}
+
+::ng-deep .slick-dots li button:before {
+  color: #C2C8CD;
+  opacity: 1;
+}
+
+::ng-deep .slick-dotted.slick-slider {
+  margin-bottom: 45px;
+}
+
+::ng-deep .slick-prev {
+  left: -40px;
+}
+
+::ng-deep .slick-next {
+  right: -40px;
+}
+
+::ng-deep .slick-prev, .slick-next {
+  width: 32px;
+  height: 32px;
+}
+
+::ng-deep .slick-prev:before {
+  content: '\2329';
+  font-size: 32px;
+  line-height: 0;
+  color: #2A6CEA;
+}
+
+::ng-deep .slick-next:before {
+  content: '\232A';
+  font-size: 32px;
+  line-height: 0;
+  color: #2A6CEA;
+}
+
+::ng-deep .slick-dots li.slick-active button:before {
+  color: #2A6CEA;
+}
+
+@media (max-width: 1024px) {
+  .review-card {
+    height: 380px;
+  }
+}
+
+@media (max-width: 900px) {
+  .review-card {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-slider {
+    margin-bottom: 56px;
+  }
+
+  .reviews-carousel {
+    width: 100%;
+  }
+
+  .review-card {
+    padding: 10px 10px 26px;
+    height: 310px;
+  }
+
+  .review-header {
+    gap: 4px;
+  }
+
+  h2 {
+    margin-top: 33px;
+  }
+}
+
+@media (max-width: 540px) {
+  .review-card {
+    height: 380px;
+  }
+}
+
+
+@media (max-width: 475px) {
+  .review-card {
+    height: 450px;
+  }
+
+  .review-content {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 410px) {
+  .review-card {
+    height: 520px;
+  }
+}
+
+@media (max-width: 375px) {
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .review-card {
+    height: 310px;
+  }
+
+  .review-header {
+    gap: 8px;
+  }
+}

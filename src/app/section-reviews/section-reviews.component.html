@@ -1,0 +1,19 @@
+<section class="reviews-slider">
+  <app-container>
+    <h2>Отзывы</h2>
+    <ngx-slick-carousel class="reviews-carousel" [config]="slideConfig">
+      <div ngxSlickItem *ngFor="let review of reviews" class="reviews-slide">
+        <div class="review-card">
+          <div class="review-header">
+            <img [src]="review.photo || 'user_unnamed.jpg'" alt="{{review.name}}" class="review-image" />
+            <div class="review-header-author">
+              <h6>{{ review.name }}</h6>
+              <p class="review-header-city">{{ review.city }}</p>
+            </div>
+          </div>
+          <p class="review-content">{{ review.text }}</p>
+        </div>
+      </div>
+    </ngx-slick-carousel>
+  </app-container>
+</section>

@@ -1,0 +1,66 @@
+#operating-principle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+:host ::ng-deep .container {
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  line-height: 56px;
+  margin-bottom: 61px;
+}
+
+.steps {
+  width: 100%;
+  display: flex;
+  gap: 34px;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #5E646A;
+}
+
+@media (max-width: 768px) {
+  #operating-principle {
+    margin-bottom: 56px;
+  }
+
+  .steps {
+    flex-wrap: wrap;
+  }
+
+  .step {
+    width: calc((100vw - 40px - 34px)/2);
+  }
+
+  h2 {
+    margin-bottom: 41px;
+  }
+}
+
+@media (max-width: 376px) {
+  .step {
+    width: calc((100vw - 40px));
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}

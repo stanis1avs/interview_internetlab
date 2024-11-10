@@ -1,0 +1,33 @@
+<section id="contact-form">
+  <app-container>
+    <h2>Отправь форму</h2>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="input-group"
+       [ngClass]="{'filled': contactForm.get('name')?.value,
+                   'valid': contactForm.get('name')?.valid,
+                   'invalid': contactForm.get('name')?.invalid && contactForm.get('name')?.touched}">
+        <label>Имя</label>
+        <input type="text" formControlName="name"/>
+        <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="input-error">
+          Имя должно содержать минимум 2 буквы
+        </div>
+      </div>
+      <div class="input-group"
+           [ngClass]="{'filled': contactForm.get('phone')?.value,
+                       'valid': contactForm.get('phone')?.valid,
+                       'invalid': contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched}">
+        <label>Телефон</label>
+        <input type="text" formControlName="phone" />
+        <div *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched" class="input-error">
+          Телефон должен начинаться с '+' и содержать 11 цифр
+        </div>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" formControlName="agreement" id="agreement"/>
+        <label for="agreement">Согласен, отказываюсь</label>
+      </div>
+
+      <button type="submit">Отправить</button>
+    </form>
+  </app-container>
+</section>

@@ -1,0 +1,14 @@
+<section id="faq-section">
+  <app-container>
+    <h2>Вопросы и ответы</h2>
+    <div *ngFor="let question of questions; let index = index" class="faq-item" [class.active]="activeIndex === index">
+      <p class="faq-question" (click)="toggleAnswer(index)">
+        {{ question.title }}
+        <span class="faq-icon">+</span>
+      </p>
+      <p *ngIf="activeIndex === index" class="faq-answer">
+        {{ question.answer }}
+      </p>
+    </div>
+  </app-container>
+</section>
